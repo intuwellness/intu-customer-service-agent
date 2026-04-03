@@ -5,7 +5,7 @@
  */
 
 const express = require("express");
-const Anthropic = require("@anthropic-ai/sdk");
+const { default: Anthropic } = require("@anthropic-ai/sdk");
 const fs = require("fs");
 const path = require("path");
 
