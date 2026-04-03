@@ -184,7 +184,7 @@ app.post("/webhook/manychat", async (req, res) => {
     const apiKey = process.env.ANTHROPIC_API_KEY;
     if (!apiKey) throw new Error("ANTHROPIC_API_KEY not set");
 
-    const client = new Anthropic.default({ apiKey });
+    const client = new new Anthropic({ apiKey });
 
     const userMessage = `[Channel: ${channel}]\n\nFrom: ${name}\n\n${message}`;
 
