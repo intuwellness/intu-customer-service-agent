@@ -199,7 +199,7 @@ app.post("/webhook/manychat", async (req, res) => {
 
     console.log(`[${channel}] Reply generated for ${name}`);
 
-    res.json({ version: "v2", content: [{ type: "text", text: reply }] });      
+    res.json({ version: "v2", content: { messages: [{ type: "text", text: reply }] } });       
 
   } catch (err) {
     console.error("Webhook error:", err.message);
